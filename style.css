@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Cascadia Code Pl';
+  src: url('/assets/font/CascadiaCodePL.b7fa7bdf.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Cascadia Code Pl';
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  overflow: hidden;
+}
+
+section{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.editor{
+  position: relative;
+}
+
+.editor::after {
+  content: '';
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px; 
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: 46px;
+
+}
+
+#html::after {
+  background-image: url('/assets/html5.svg');
+}
+
+#css::after{
+  background-image: url('/assets/css3.svg');
+}
+
+#javascript::after{
+  background-image: url('/assets/js.svg');
+}
+
+
+iframe {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border: none
+}
